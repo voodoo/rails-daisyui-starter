@@ -1,0 +1,7 @@
+<%= show_for @contact do |s| %>
+  <%= s.attribute :name %>
+  <%= s.attribute :email %>
+<% end %>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-4xl">Contacts</h1>
+  <%= button_to "New contact", new_contact_path, method: :get %>
+
+<div id="contacts" class="m-16">
+
+  <% @contacts.each do |contact| %>
+    <div class="border border-gray-200 p-4 mb-4">
+      <%= render contact %>
+      <p>
+        <%= button_to "Show this contact", contact, method: :get %>
+      </p>
+    </div>
+  <% end %>
+
+
+</div>
+
